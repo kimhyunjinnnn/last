@@ -137,6 +137,28 @@ class PaymentSystem{
 			return false;
 		}
 	}
+	boolean giftCardPayment(int giftCard, int price, int point){
+		if (price>giftCard) {
+			System.out.println("상품권 금액이 부족합니다.");
+			return false;
+		}else {
+			System.out.println("상품권 금액 : "+giftCard);
+			System.out.println("총 결제 금액 : "+price);
+			System.out.println("총 적립금 : "+point);
+			System.out.println("결제를 진행하시겠습니까? (Y/N)");
+			String answer = s.next();
+			if(answer.equals("Y") || answer.equals("y")){
+				return true;
+			}else {
+				System.out.println("결제가 취소되었습니다.");
+				return false;
+			}
+		}
+	}
+	int restGiftCard(int amount, int giftCard) { //남은 상품권 금액 리턴
+		giftCard-=amount;
+		return giftCard;
+	}
 }
 
 public class test {
