@@ -78,6 +78,32 @@ class Buyer{
 		}
 		count=0;
 	}
+	int cartCount() { //카트 채워진 수세기
+		for(int i=0;i<cart.length;i++) {
+			if (cart[i]==null) break;
+			count+=1;
+		}
+		return count;
+	}
+
+	void summary() { //상품요약
+		cartCount();
+		for(int i =0;i<count;i++) {
+			System.out.print(cart[i]+" : ");
+			System.out.println(foodAmount[i]+"개");
+		}
+		count=0;
+	}
+	void removeCart() { //카트비우기
+		cartCount();
+		for(int i =count-1;i>=0;i--) {
+			cart[i]=null;
+			foodAmount[i]=0;
+		}
+		price=0;
+		bonusPoint=0;
+		count=0;
+	}
 }
 
 public class test {
