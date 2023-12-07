@@ -165,6 +165,12 @@ public class test {
 
 	public static void main(String[] args) {
 	}
-
+	Scanner s = new Scanner(System.in);
+	Buyer b = new Buyer();
+	PaymentSystem p = new PaymentSystem();
+	Integer[] integer = new Integer[10];
+	int menuNum;
+	int cheese =0, shrimp = 0, coke = 0; //상품 단가 0으로 초기화
+	int unitPrice=0; 
 }
 
