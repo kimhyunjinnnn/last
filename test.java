@@ -253,6 +253,24 @@ public class test {
 		boolean success = false;
 		int rest=0;
 		
-		
+		if (method==1) { 
+			success = p.cashPayment(total, b.sumBonusPoint());
+		}else if (method ==2) {
+			success = p.cardPayment(total, b.sumBonusPoint());
+		}else if(method==3) {
+			System.out.println("상품권 금액 입력 : ");
+			int giftCard = s.nextInt();
+			success = p.giftCardPayment(giftCard, total,b.sumBonusPoint());
+			rest = p.restGiftCard(total, giftCard);
+		}else if(method==4) {
+			success = p.pointPayment(total, b.sumBonusPoint());
+		}
+		else if(method ==5) {
+			System.out.println("결제가 취소되었습니다.");
+			return;
+		}else {
+			System.out.println("잘못된 결제 방법입니다.");
+		}
+
 }
 
