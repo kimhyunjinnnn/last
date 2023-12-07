@@ -125,6 +125,18 @@ class PaymentSystem{
 			return false;
 		}
 	}
+	boolean cardPayment (int price,  int point) {
+		System.out.println("총 결제 금액 : "+price);
+		System.out.println("총 적립금 : "+point);
+		System.out.println("카드 결제를 진행하시겠습니까? (Y/N)");
+		String answer = s.next();
+		if(answer.equals("Y") || answer.equals("y")){
+			return true;
+		}else {
+			System.out.println("결제가 취소되었습니다.");
+			return false;
+		}
+	}
 }
 
 public class test {
