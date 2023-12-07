@@ -62,6 +62,22 @@ class Buyer{
 	int sumBonusPoint() { //총적립금리턴
 		return bonusPoint;
 	}
+	int cartCount() { //카트 채워진 수세기
+		for(int i=0;i<cart.length;i++) {
+			if (cart[i]==null) break;
+			count+=1;
+		}
+		return count;
+	}
+
+	void summary() { //상품요약
+		cartCount();
+		for(int i =0;i<count;i++) {
+			System.out.print(cart[i]+" : ");
+			System.out.println(foodAmount[i]+"개");
+		}
+		count=0;
+	}
 }
 
 public class test {
