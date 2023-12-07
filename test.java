@@ -21,6 +21,12 @@ class Shrimpburger extends Food{
 	}
 	public String toString() {return "새우버거";}//Object클래스의 toString()을 오버라이딩
 }
+class Coke extends Food{
+	Coke(){  //조상클래스의 생성자 Food(int price)를 호출
+		super(1000);   //콜라를 1000원으로 한다
+	}
+	public String toString() {return "코카콜라";}//Object클래스의 toString()을 오버라이딩
+}
 
 public class test {
 
