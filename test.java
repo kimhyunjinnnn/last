@@ -113,6 +113,18 @@ class PaymentSystem{
 		s = new Scanner(System.in);
 		b = new Buyer();
 	}
+	boolean cashPayment(int price, int point) {
+		System.out.println("현금 결제 금액을 입력하세요 : ");
+		int cash = s.nextInt();
+		if(cash >= price) {
+			System.out.println("현금 결제가 완료되었습니다.");
+			System.out.println("거스름 돈 "+(cash - price)+"원입니다");
+			return true;
+		}else {
+			System.out.println("금액이 부족합니다. 결제가 취소됩니다.");
+			return false;
+		}
+	}
 }
 
 public class test {
