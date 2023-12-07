@@ -268,7 +268,6 @@ public class test {
 		else if(method ==5) {
 			System.out.println("결제가 취소되었습니다.");
 			return;
-		}else if(method==6){
 		}else {
 		}
 			System.out.println("잘못된 결제 방법입니다.");
