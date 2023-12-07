@@ -105,6 +105,15 @@ class Buyer{
 		count=0;
 	}
 }
+class PaymentSystem{
+	private Scanner s;
+	Buyer b;
+	int giftCard;
+	public PaymentSystem() {
+		s = new Scanner(System.in);
+		b = new Buyer();
+	}
+}
 
 public class test {
 
