@@ -272,5 +272,44 @@ public class test {
 			System.out.println("잘못된 결제 방법입니다.");
 		}
 
+		if(success) {
+			System.out.println("결제가 완료되었습니다. 감사합니다.");
+			System.out.println("영수증을 발급하시겠습니까?(Y/N)");
+			String answer = s.next();
+			if(answer.equals("Y") || answer.equals("y")){
+				System.out.println("===================================");
+				System.out.println("   품명          단가          수량          금액");
+				System.out.println("===================================");
+				b.cartCount();
+				for(int i =0;i<b.count;i++) {
+					System.out.print(b.cart[i]+"     ");    //품명
+					System.out.print(integer[i]+"원       ");   //단가
+					System.out.print(b.foodAmount[i]+"개"+"         ");   //수량
+					System.out.println(integer[i]*b.foodAmount[i]+"원");   //금액
+				}
+
+				System.out.println("===================================");
+				System.out.println("총 금액 : " +total+"원");
+				System.out.println("적립금액 : " + b.sumBonusPoint()+"원");
+				if (method==1) { 
+					System.out.println("결제방식 : 현금");
+					System.out.println("===================================");
+				}else if(method==2) {
+					System.out.println("결제방식 : 카드");
+					System.out.println("===================================");;
+				}else if(method==3) {
+					System.out.println("결제방식 : 상품권");
+					System.out.println("남은 상품권 금액 : "+ rest+"원");
+					System.out.println("===================================");
+				}else if(method==4) {
+					System.out.println("결제방식 : 포인트");
+					System.out.println("남은 포인트 : "+b.sumBonusPoint()+"원");
+					System.out.println("===================================");
+				}else {
+					System.out.println("영수증 발급이 취소되었습니다.");
+				}
+			}
+		}
+	}
 }
 
