@@ -181,6 +181,52 @@ public class test {
 		System.out.println("4. 계산하기 5. 장바구니 보기");
 		System.out.println("번호를 선택하세요 : ");
 		menuNum = s.nextInt();
-	}
+		while(true) {
+			System.out.println("------[메뉴]------");
+			System.out.println("1. 치즈버거(4000원)");
+			System.out.println("2. 새우버거(4000원)");
+			System.out.println("3. 코카콜라(1000원)");
+			System.out.println("-----------------");
+			System.out.println("4. 계산하기 5. 장바구니 보기");
+			System.out.println("번호를 선택하세요 : ");
+			menuNum = s.nextInt();
+
+			if(menuNum==4) {
+				break;
+			}
+
+			switch(menuNum) {
+			case 1:
+				cheese = b.buy(new  Cheeseburger());  //단가 4000원 
+				break;
+			case 2:
+				shrimp = b.buy(new  Shrimpburger());  //단가 4000원 
+				break;
+			case 3:
+				coke = b.buy(new  Coke());  //단가 1000원 
+				break;
+			case 5:
+				System.out.println("------[장바구니-최대10개]------");
+				System.out.println("상품명");
+				b.summary();
+				System.out.println("결제 금액 : "+b.sumPrice());
+				System.out.println("적립금 : "+b.sumBonusPoint());
+				System.out.println("----------------------------");
+				System.out.println("1. 주문계속하기 2. 장바구니 비우기");
+				int numCart = s.nextInt();
+				if(numCart==1) {
+					break;
+				}else if(numCart==2) {
+					b.removeCart();
+					System.out.println("장바구니 비우기 완료");
+					break;
+				}else {
+					break;
+				}
+			default: 
+				System.out.println("번호를 잘못입력하였습니다.");
+				break;
+			}
+			
 }
 
