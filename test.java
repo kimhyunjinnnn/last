@@ -227,6 +227,32 @@ public class test {
 				System.out.println("번호를 잘못입력하였습니다.");
 				break;
 			}
-			
+			if(menuNum==1) {
+				integer[unitPrice]=cheese;
+				unitPrice++;
+			}else if(menuNum==2) {
+				integer[unitPrice]=shrimp;
+				unitPrice++;
+			}else if(menuNum==3) {
+				integer[unitPrice]=coke;
+				unitPrice++;
+			}
+		}
+		for(int k =0;k<b.count;k++) {
+			System.out.println(integer[k]);
+		}
+		System.out.println("상품명");
+		b.summary();
+		System.out.println("총 금액은 "+b.sumPrice()+"원입니다.");	
+		int total=b.sumPrice();
+		System.out.println("||결제 방법을 선택하세요||");
+		System.out.println("1: 현금         2: 카드");
+		System.out.println("3: 기프티콘  4: 포인트(5000원이상시사용가능)");
+		System.out.println("5: 결제 취소");
+		int method = s.nextInt();
+		boolean success = false;
+		int rest=0;
+		
+		
 }
 
