@@ -172,5 +172,15 @@ public class test {
 	int menuNum;
 	int cheese =0, shrimp = 0, coke = 0; //상품 단가 0으로 초기화
 	int unitPrice=0; 
+	while(true) {
+		System.out.println("------[메뉴]------");
+		System.out.println("1. 치즈버거(4000원)");
+		System.out.println("2. 새우버거(4000원)");
+		System.out.println("3. 코카콜라(1000원)");
+		System.out.println("-----------------");
+		System.out.println("4. 계산하기 5. 장바구니 보기");
+		System.out.println("번호를 선택하세요 : ");
+		menuNum = s.nextInt();
+	}
 }
 
